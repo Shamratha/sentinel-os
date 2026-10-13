@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07131d" />
+    <meta name="description" content="SentinelOS continuous PCI and PII compliance control tower" />
+    <title>SentinelOS · Continuous compliance control tower</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-extra.css" />
+    <link rel="stylesheet" href="styles-fixes.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <div class="brand-name">Sentinel<span>OS</span></div>
+            <div class="brand-caption">continuous assurance</div>
+          </div>
+        </div>
+
+        <div class="workspace-switcher">
+          <div class="workspace-avatar">AC</div>
+          <div class="workspace-copy">
+            <strong>Atlas Credit Union</strong>
+            <span>Production workspace</span>
+          </div>
+          <button class="icon-button" aria-label="Switch workspace">⌄</button>
+        </div>
+
+        <div class="nav-label">Control plane</div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-view="overview"><span class="nav-icon">⌂</span>Overview</button>
+          <button class="nav-item" data-view="regulations"><span class="nav-icon">◎</span>Regulatory intelligence <span class="nav-count">3</span></button>
+          <button class="nav-item" data-view="controls"><span class="nav-icon">◇</span>Control library</button>
+          <button class="nav-item" data-view="findings"><span class="nav-icon">!</span>Findings <span class="nav-count danger">7</span></button>
+          <button class="nav-item" data-view="evidence"><span class="nav-icon">▣</span>Evidence center</button>
+          <button class="nav-item" data-view="remediation"><span class="nav-icon">↗</span>Remediation</button>
+        </nav>
+
+        <div class="nav-label agent-label">Agent fleet</div>
+        <div class="agent-status-list">
+          <div class="agent-status"><span class="status-dot live"></span><span>Regulation Scout</span><small>watching</small></div>
+          <div class="agent-status"><span class="status-dot live"></span><span>Data Discovery</span><small>scanning</small></div>
+          <div class="agent-status"><span class="status-dot amber"></span><span>Evidence Agent</span><small>2 requests</small></div>
+        </div>
+
+        <div class="sidebar-footer">
+          <div class="security-badge"><span>⌁</span><div><strong>Privacy boundary active</strong><small>Raw values never leave scanners</small></div></div>
+          <button class="user-menu"><span class="user-avatar">SM</span><span><strong>Sarah Mathew</strong><small>Compliance lead</small></span><span class="more">•••</span></button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="breadcrumb-label">Overview</strong></div>
+          <div class="topbar-actions">
+            <div class="live-pill"><span class="status-dot live"></span>All systems operational</div>
+            <button class="topbar-icon" aria-label="Notifications">◌<span class="notification-dot"></span></button>
+            <button class="help-button">?</button>
+          </div>
+        </header>
+
+        <section id="view-overview" class="view active-view">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-line"></span>Tuesday, October 13, 2026 · 10:42 IST</div>
+              <h1>Good morning, Sarah<span class="heading-period">.</span></h1>
+              <p>Your compliance twin is current. One critical exposure needs attention.</p>
+            </div>
+            <div class="heading-actions">
+              <button class="button secondary" data-action="run-scan"><span class="button-icon">↻</span>Run scan</button>
+              <button class="button primary" data-action="simulate"><span class="button-icon">＋</span>Simulate violation</button>
+            </div>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card score-card">
+              <div class="metric-header"><span>Compliance posture</span><span class="trend positive">↑ 4.8%</span></div>
+              <div class="score-row"><div class="score-ring" id="score-ring"><div><strong id="score-value">87</strong><small>/100</small></div></div><div class="score-context"><strong>Strong foundation</strong><span>Up from 83.1 last week</span><button class="text-link" data-view-target="controls">View controls <span>→</span></button></div></div>
+              <div class="mini-progress"><span style="width: 87%"></span></div>
+              <div class="metric-foot"><span>Evidence freshness</span><strong>92%</strong></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-header"><span>Open findings</span><span class="trend negative">↑ 2 new</span></div>
+              <div class="metric-number danger-number" id="finding-count">07</div>
+              <div class="metric-sub"><span class="severity-dot critical"></span><strong id="critical-count">1 critical</strong><span>needs action today</span></div>
+              <div class="bar-stack"><span class="bar-critical" style="width: 14%"></span><span class="bar-high" style="width: 43%"></span><span class="bar-medium" style="width: 43%"></span></div>
+              <div class="metric-foot"><span>↓ 12% aging week over week</span><button class="text-link" data-view-target="findings">Review <span>→</span></button></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-header"><span>Assets under watch</span><span class="trend neutral">Live</span></div>
+              <div class="metric-number">1,284</div>
+              <div class="asset-breakdown"><span><i class="asset-icon database">▤</i><b>42</b> data stores</span><span><i class="asset-icon app">◈</i><b>86</b> applications</span><span><i class="asset-icon vendor">◇</i><b>18</b> vendors</span></div>
+              <div class="metric-foot"><span>Last inventory sync 4 min ago</span><span class="sync-indicator">●</span></div>
+            </article>
+            <article class="metric-card">
+              <div class="metric-header"><span>Agent activity</span><span class="trend positive">Healthy</span></div>
+              <div class="agent-score"><div class="agent-orbit"><span class="orbit-core">✦</span><i></i><i></i><i></i></div><div><div class="metric-number compact">24<span class="metric-unit">/24</span></div><span class="metric-sub">checks completed today</span></div></div>
+              <div class="metric-foot"><span>Next scheduled run in 18 min</span><button class="text-link" data-action="show-agents">Details <span>→</span></button></div>
+            </article>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="panel risk-panel">
+              <div class="panel-heading"><div><span class="panel-kicker">Risk intelligence</span><h2>Posture over time</h2></div><div class="segmented"><button class="selected">30 days</button><button>90 days</button><button>1 year</button></div></div>
+              <div class="chart-legend"><span><i class="legend-line teal"></i>Compliance score</span><span><i class="legend-line coral"></i>Risk exposure</span><span class="chart-updated">Updated 4 min ago</span></div>
+              <div class="chart-wrap"><div class="y-axis"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div><div class="chart"><div class="grid-line line-1"></div><div class="grid-line line-2"></div><div class="grid-line line-3"></div><div class="grid-line line-4"></div><svg viewBox="0 0 720 220" preserveAspectRatio="none" role="img" aria-label="Compliance score trending up and risk exposure trending down"><defs><linearGradient id="scoreFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#39d6c1" stop-opacity=".22"/><stop offset="1" stop-color="#39d6c1" stop-opacity="0"/></linearGradient></defs><path class="area-path" d="M0,150 C70,155 88,130 140,135 S215,115 270,120 S335,100 390,105 S465,82 520,90 S600,60 720,55 L720,220 L0,220 Z"></path><path class="score-path" d="M0,150 C70,155 88,130 140,135 S215,115 270,120 S335,100 390,105 S465,82 520,90 S600,60 720,55"></path><path class="risk-path" d="M0,85 C58,82 80,112 140,105 S215,122 270,130 S345,122 390,140 S470,135 520,154 S625,150 720,176"></path><circle cx="720" cy="55" r="5" class="point score-point"></circle><circle cx="720" cy="176" r="5" class="point risk-point"></circle></svg><div class="x-axis"><span>Sep 14</span><span>Sep 21</span><span>Sep 28</span><span>Oct 05</span><span>Oct 13</span></div></div></div>
+              <div class="chart-callout"><span class="callout-icon">✦</span><div><strong>Agent insight</strong><p>Posture improved after 12 stale evidence items were refreshed. Risk exposure is still elevated in <b>payment observability</b>.</p></div><button class="icon-button">→</button></div>
+            </article>
+
+            <article class="panel priority-panel">
+              <div class="panel-heading"><div><span class="panel-kicker">Needs your attention</span><h2>Priority queue <span class="queue-count">4</span></h2></div><button class="text-link" data-view-target="findings">View all <span>→</span></button></div>
+              <div class="priority-list">
+                <button class="priority-item" data-finding="card-logs"><span class="priority-icon critical-icon">!</span><span class="priority-copy"><strong>Cardholder data in logs</strong><small>Checkout API · PCI DSS 10.2.1</small></span><span class="priority-meta"><em class="severity critical">Critical</em><small>12 min ago</small></span></button>
+                <button class="priority-item" data-finding="vendor-transfer"><span class="priority-icon high-icon">↗</span><span class="priority-copy"><strong>Vendor transfer assessment</strong><small>CloudRelay · GDPR Art. 46</small></span><span class="priority-meta"><em class="severity high">High</em><small>2h ago</small></span></button>
+                <button class="priority-item" data-finding="script-inventory"><span class="priority-icon high-icon">◇</span><span class="priority-copy"><strong>Payment script inventory</strong><small>Web checkout · PCI DSS 6.4.3</small></span><span class="priority-meta"><em class="severity high">High</em><small>Yesterday</small></span></button>
+                <button class="priority-item" data-finding="deletion-request"><span class="priority-icon medium-icon">⌁</span><span class="priority-copy"><strong>Deletion request propagation</strong><small>Customer 00928 · GDPR Art. 17</small></span><span class="priority-meta"><em class="severity medium">Medium</em><small>Yesterday</small></span></button>
+              </div>
+              <div class="panel-footer-note"><span class="agent-mini">✦</span><span>Remediation Agent sequenced these by impact and evidence freshness.</span></div>
+            </article>
+          </div>
+
+          <div class="lower-grid">
+            <article class="panel activity-panel">
+              <div class="panel-heading"><div><span class="panel-kicker">Agent event stream</span><h2>What Sentinel did</h2></div><button class="filter-button">Last 24h <span>⌄</span></button></div>
+              <div class="activity-list" id="activity-list">
+                <div class="activity-item"><span class="activity-icon regulation">◎</span><div><strong>Regulation Scout compiled a new obligation</strong><p>PCI DSS v4.0.1 · Requirement 6.4.3 mapped to 4 controls.</p></div><time>4m</time></div>
+                <div class="activity-item"><span class="activity-icon discovery">⌕</span><div><strong>Data Discovery found a sensitive value</strong><p>Masked card-like value detected in <code>checkout-api.log</code>.</p></div><time>12m</time></div>
+                <div class="activity-item"><span class="activity-icon evidence">▣</span><div><strong>Evidence Agent refreshed 12 artifacts</strong><p>Encryption and access-control evidence is now fresh.</p></div><time>28m</time></div>
+                <div class="activity-item"><span class="activity-icon review">✓</span><div><strong>Adversarial Reviewer challenged a conclusion</strong><p>Backup replica was missing from encryption scope.</p></div><time>1h</time></div>
+              </div>
+              <button class="activity-more" data-action="show-agents">Open agent timeline <span>→</span></button>
+            </article>
+            <article class="panel coverage-panel">
+              <div class="panel-heading"><div><span class="panel-kicker">Framework coverage</span><h2>Control health</h2></div><button class="text-link" data-view-target="controls">Library <span>→</span></button></div>
+              <div class="coverage-list">
+                <div class="coverage-row"><div class="coverage-name"><span class="framework-badge pci">PCI</span><div><strong>PCI DSS 4.0.1</strong><small>48 of 52 requirements mapped</small></div></div><div class="coverage-value"><strong>92%</strong><div class="mini-progress"><span style="width: 92%"></span></div></div></div>
+                <div class="coverage-row"><div class="coverage-name"><span class="framework-badge gdpr">GDPR</span><div><strong>GDPR</strong><small>31 of 36 obligations mapped</small></div></div><div class="coverage-value"><strong>86%</strong><div class="mini-progress purple"><span style="width: 86%"></span></div></div></div>
+                <div class="coverage-row"><div class="coverage-name"><span class="framework-badge ccpa">CPRA</span><div><strong>CCPA / CPRA</strong><small>18 of 24 obligations mapped</small></div></div><div class="coverage-value"><strong>75%</strong><div class="mini-progress amber"><span style="width: 75%"></span></div></div></div>
+              </div>
+              <div class="coverage-callout"><span>✦</span><span>Cross-framework overlap saved an estimated <b>18 hours</b> this week.</span></div>
+            </article>
+          </div>
+        </section>
+
+        <section id="view-regulations" class="view">
+          <div class="page-heading compact-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>Regulatory intelligence</div><h1>From rule change to action.</h1><p>Regulation Scout watches public sources and compiles obligations into your control language.</p></div><div class="heading-actions"><button class="button secondary" data-action="refresh-regulations"><span class="button-icon">↻</span>Refresh sources</button><button class="button primary" data-action="compile"><span class="button-icon">✦</span>Compile change</button></div></div>
+          <div class="intel-banner"><div class="intel-banner-icon">◎</div><div><strong>3 updates require impact analysis</strong><p>Sentinel found new or changed language across PCI DSS, GDPR guidance and CCPA regulations.</p></div><span class="intel-banner-time">Last crawl · 4 min ago</span></div>
+          <div class="regulation-layout"><div class="panel regulation-feed"><div class="panel-heading"><div><span class="panel-kicker">Watched sources</span><h2>Regulation feed <span class="queue-count">3 new</span></h2></div><button class="filter-button">All domains <span>⌄</span></button></div><div class="regulation-items"><button class="regulation-item selected"><div class="source-logo pci-logo">PCI</div><div class="regulation-copy"><div><strong>PCI DSS v4.0.1</strong><span class="new-tag">NEW</span></div><p>Requirement 6.4.3 · Payment page script authorization and integrity</p><small>Payment Card Industry Security Standards Council · Published Oct 09, 2026</small></div><span class="row-arrow">→</span></button><button class="regulation-item"><div class="source-logo gdpr-logo">EU</div><div class="regulation-copy"><div><strong>EDPB Guidance 05/2026</strong></div><p>International transfers · supplementary measures update</p><small>European Data Protection Board · Published Oct 07, 2026</small></div><span class="row-arrow">→</span></button><button class="regulation-item"><div class="source-logo ccpa-logo">CA</div><div class="regulation-copy"><div><strong>CPRA Enforcement Advisory</strong></div><p>Dark patterns and consent withdrawal experience</p><small>California Privacy Protection Agency · Published Oct 03, 2026</small></div><span class="row-arrow">→</span></button></div></div><div class="panel compiler-panel"><div class="panel-heading"><div><span class="panel-kicker">Regulation compiler</span><h2>Latest impact map</h2></div><span class="confidence-badge">94% confidence</span></div><div class="compiler-source"><span class="source-logo pci-logo small">PCI</span><div><strong>PCI DSS v4.0.1 · 6.4.3</strong><small>Payment page scripts</small></div><span class="compiled-check">✓</span></div><div class="obligation-box"><span class="box-label">Compiled obligation</span><p>Inventory all payment-page scripts, authorize each script, and detect unauthorized changes.</p><div class="obligation-meta"><span>Applies to <b>3 assets</b></span><span>Evidence <b>4 types</b></span></div></div><div class="impact-stack"><div><span class="impact-dot teal"></span><span><b>4 controls</b> mapped</span></div><div><span class="impact-dot amber"></span><span><b>2 evidence</b> items stale</span></div><div><span class="impact-dot coral"></span><span><b>1 high</b> risk introduced</span></div></div><button class="button primary full" data-action="create-impact">Create impact plan <span>→</span></button></div></div>
+        </section>
+
+        <section id="view-controls" class="view"><div class="page-heading compact-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>Control library</div><h1>One control. Many obligations.</h1><p>Control DNA links policies, technical tests and evidence across frameworks.</p></div><div class="heading-actions"><button class="button secondary" data-action="export-controls">Export library</button><button class="button primary" data-action="new-control"><span class="button-icon">＋</span>New control</button></div></div><div class="control-stats"><div class="stat-chip"><span class="status-dot live"></span><div><strong>86</strong><small>active controls</small></div></div><div class="stat-chip"><span class="status-dot amber"></span><div><strong>9</strong><small>need evidence</small></div></div><div class="stat-chip"><span class="status-dot danger-dot"></span><div><strong>3</strong><small>at risk</small></div></div><div class="stat-chip"><span class="status-dot purple-dot"></span><div><strong>18h</strong><small>saved this week</small></div></div></div><div class="panel table-panel"><div class="table-toolbar"><div class="search-box"><span>⌕</span><input placeholder="Search controls, policies or frameworks" /></div><button class="filter-button">All status <span>⌄</span></button><button class="filter-button">All domains <span>⌄</span></button></div><div class="data-table"><div class="table-row table-head"><span>Control</span><span>Mapped obligations</span><span>Evidence health</span><span>Owner</span><span>Status</span></div><div class="table-row"><div class="control-cell"><span class="control-glyph teal-bg">⌁</span><div><strong>Payment data masking</strong><small>CTL-PCI-10.2 · Updated 12m ago</small></div></div><span><b>4</b> mappings</span><div class="table-health"><span>Fresh</span><div class="mini-progress"><span style="width: 98%"></span></div></div><span class="owner">Platform security</span><span class="status-pill healthy">Healthy</span></div><div class="table-row"><div class="control-cell"><span class="control-glyph purple-bg">◈</span><div><strong>Cross-border transfer review</strong><small>CTL-GDPR-46 · Updated 2d ago</small></div></div><span><b>3</b> mappings</span><div class="table-health"><span>Needs refresh</span><div class="mini-progress purple"><span style="width: 68%"></span></div></div><span class="owner">Privacy office</span><span class="status-pill review">Review</span></div><div class="table-row"><div class="control-cell"><span class="control-glyph amber-bg">▤</span><div><strong>Backup encryption</strong><small>CTL-PCI-03.5 · Updated 6h ago</small></div></div><span><b>5</b> mappings</span><div class="table-health"><span>Partial scope</span><div class="mini-progress amber"><span style="width: 81%"></span></div></div><span class="owner">Cloud security</span><span class="status-pill risk">At risk</span></div><div class="table-row"><div class="control-cell"><span class="control-glyph coral-bg">◇</span><div><strong>Consent and preference ledger</strong><small>CTL-PRIV-07 · Updated 1d ago</small></div></div><span><b>6</b> mappings</span><div class="table-health"><span>Fresh</span><div class="mini-progress"><span style="width: 94%"></span></div></div><span class="owner">Customer trust</span><span class="status-pill healthy">Healthy</span></div></div></div></section>
+
+        <section id="view-findings" class="view"><div class="page-heading compact-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>Findings</div><h1>Risk, with a next action.</h1><p>Every finding is evidence-backed, explainable and sequenced by the Remediation Agent.</p></div><div class="heading-actions"><button class="button secondary" data-action="export-findings">Export findings</button><button class="button primary" data-action="simulate"><span class="button-icon">＋</span>Simulate finding</button></div></div><div class="finding-overview"><div class="finding-total"><span>Open exposure</span><strong id="findings-total-large">07</strong><small>across 4 domains</small></div><div class="finding-breakdown"><div><span class="severity-dot critical"></span><strong id="finding-critical-large">1</strong><small>critical</small></div><div><span class="severity-dot high"></span><strong id="finding-high-large">3</strong><small>high</small></div><div><span class="severity-dot medium"></span><strong id="finding-medium-large">3</strong><small>medium</small></div></div><div class="risk-slo"><span>Critical response SLO</span><strong>83%</strong><div class="mini-progress"><span style="width: 83%"></span></div><small>5 of 6 within 4 hours</small></div></div><div class="findings-layout"><div class="panel findings-list-panel"><div class="table-toolbar"><div class="search-box"><span>⌕</span><input placeholder="Search findings" /></div><button class="filter-button">Priority <span>⌄</span></button><button class="filter-button">All owners <span>⌄</span></button></div><div id="finding-list" class="finding-list"></div></div><div id="finding-detail" class="panel finding-detail-panel"></div></div></section>
+
+        <section id="view-evidence" class="view"><div class="page-heading compact-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>Evidence center</div><h1>Proof that stays current.</h1><p>Evidence has a scope, a source and an expiration date. Sentinel keeps the audit trail alive.</p></div><div class="heading-actions"><button class="button secondary" data-action="refresh-evidence"><span class="button-icon">↻</span>Refresh stale</button><button class="button primary" data-action="generate-package"><span class="button-icon">▣</span>Generate audit pack</button></div></div><div class="evidence-metrics"><div><span>Evidence coverage</span><strong>92%</strong><small>↑ 6.2% this month</small></div><div><span>Fresh artifacts</span><strong>214</strong><small>of 232 total</small></div><div><span>Expiring this week</span><strong class="amber-text">12</strong><small>2 require owner review</small></div><div><span>Audit packages</span><strong>08</strong><small>latest generated 3d ago</small></div></div><div class="evidence-layout"><div class="panel freshness-panel"><div class="panel-heading"><div><span class="panel-kicker">Evidence freshness</span><h2>What needs attention</h2></div><button class="filter-button">By expiry <span>⌄</span></button></div><div class="freshness-bars"><div class="fresh-bar-row"><div><strong>Fresh</strong><small>Valid for more than 7 days</small></div><div class="fresh-bar"><span class="fresh" style="width: 79%"></span></div><b>184</b></div><div class="fresh-bar-row"><div><strong>Expiring soon</strong><small>Valid for less than 7 days</small></div><div class="fresh-bar"><span class="soon" style="width: 16%"></span></div><b>30</b></div><div class="fresh-bar-row"><div><strong>Stale</strong><small>Requires recollection</small></div><div class="fresh-bar"><span class="stale" style="width: 9%"></span></div><b>18</b></div></div><div class="evidence-note"><span>✦</span><p><b>Evidence Agent recommendation:</b> refresh the two backup encryption artifacts before the next control review.</p></div></div><div class="panel packages-panel"><div class="panel-heading"><div><span class="panel-kicker">Audit packages</span><h2>Ready to share</h2></div><button class="text-link" data-action="generate-package">New pack <span>＋</span></button></div><div class="package-list"><div class="package-row"><span class="package-icon">▣</span><div><strong>Q3 PCI DSS Assessment</strong><small>52 controls · Generated Oct 10</small></div><span class="package-status ready">Ready</span><button class="icon-button">↓</button></div><div class="package-row"><span class="package-icon purple">▣</span><div><strong>Privacy Operations Review</strong><small>36 obligations · Generated Oct 02</small></div><span class="package-status ready">Ready</span><button class="icon-button">↓</button></div><div class="package-row"><span class="package-icon amber">▣</span><div><strong>Vendor Due Diligence Pack</strong><small>18 vendors · Generated Sep 28</small></div><span class="package-status draft">Draft</span><button class="icon-button">→</button></div></div></div></div></section>
+
+        <section id="view-remediation" class="view"><div class="page-heading compact-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>Remediation</div><h1>From finding to fixed.</h1><p>Plans are sequenced by blast radius, effort, owner and evidence dependencies.</p></div><div class="heading-actions"><button class="button secondary" data-action="export-remediation">Export plan</button><button class="button primary" data-action="new-task"><span class="button-icon">＋</span>New task</button></div></div><div class="remediation-board"><div class="board-column"><div class="board-heading"><span class="board-dot critical"></span><strong>Critical</strong><span>1</span></div><div class="task-card critical-border"><div class="task-card-top"><span class="severity critical">P0</span><small>Due in 3h</small></div><h3>Redact card data in checkout logs</h3><p>Add structured redaction middleware and replay a synthetic payment.</p><div class="task-card-bottom"><span class="avatar-stack"><i>AS</i><i>PS</i></span><span>3 steps · 2 evidence</span><span class="task-arrow">→</span></div></div></div><div class="board-column"><div class="board-heading"><span class="board-dot high"></span><strong>In progress</strong><span>2</span></div><div class="task-card"><div class="task-card-top"><span class="severity high">P1</span><small>Due Oct 15</small></div><h3>Complete CloudRelay transfer assessment</h3><p>Collect DPA, SCCs and regional processing inventory.</p><div class="task-card-bottom"><span class="avatar-stack"><i>PO</i></span><span>60% complete</span><span class="task-arrow">→</span></div></div><div class="task-card"><div class="task-card-top"><span class="severity high">P1</span><small>Due Oct 16</small></div><h3>Authorize payment page scripts</h3><p>Reconcile runtime inventory with approved script register.</p><div class="task-card-bottom"><span class="avatar-stack"><i>WE</i></span><span>2 steps left</span><span class="task-arrow">→</span></div></div></div><div class="board-column"><div class="board-heading"><span class="board-dot medium"></span><strong>Needs review</strong><span>2</span></div><div class="task-card"><div class="task-card-top"><span class="severity medium">P2</span><small>Evidence stale</small></div><h3>Refresh backup encryption evidence</h3><p>Two legacy replicas are outside the current evidence scope.</p><div class="task-card-bottom"><span class="avatar-stack"><i>CS</i></span><span>Awaiting owner</span><span class="task-arrow">→</span></div></div><div class="task-card"><div class="task-card-top"><span class="severity medium">P2</span><small>Due Oct 18</small></div><h3>Propagate customer deletion request</h3><p>Verify downstream analytics and vendor erasure.</p><div class="task-card-bottom"><span class="avatar-stack"><i>CT</i></span><span>4 steps · 1 evidence</span><span class="task-arrow">→</span></div></div></div><div class="board-column"><div class="board-heading"><span class="board-dot done"></span><strong>Verified</strong><span>3</span></div><div class="task-card completed"><div class="task-card-top"><span class="severity done">Done</span><small>Today</small></div><h3>Refresh API access review</h3><p>Adversarial review passed with complete evidence.</p><div class="task-card-bottom"><span class="avatar-stack"><i>PS</i></span><span>Verified by agent</span><span class="task-arrow">✓</span></div></div><div class="task-card completed"><div class="task-card-top"><span class="severity done">Done</span><small>Yesterday</small></div><h3>Tokenize support exports</h3><p>PII scanner confirmed zero raw values in exports.</p><div class="task-card-bottom"><span class="avatar-stack"><i>CO</i></span><span>Verified by agent</span><span class="task-arrow">✓</span></div></div></div></div></section>
+      </main>
+    </div>
+    <div id="toast-region" class="toast-region" aria-live="polite"></div>
+    <div id="modal-root"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

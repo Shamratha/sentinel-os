@@ -1,0 +1,12 @@
+{
+  "name": "sentinel-os",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SentinelOS — an agentic PCI/PII continuous compliance control tower.",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check app.js && node --check server.mjs"
+  }
+}
