@@ -1,10 +1,10 @@
 # SentinelOS
 
-**SentinelOS is a hackathon-ready continuous PCI/PII compliance control tower.** It turns regulatory language into executable obligations, maps obligations to reusable Control DNA, monitors sensitive-data exposure inside a privacy boundary, challenges its own conclusions, and produces audit-ready evidence.
+**SentinelOS is a continuous PCI/PII compliance control tower.** It turns regulatory language into executable obligations, maps obligations to reusable Control DNA, monitors sensitive-data exposure inside a privacy boundary, challenges its own conclusions, and produces audit-ready evidence.
 
 This repository is a self-contained, dependency-free demo that runs locally in a browser. It is designed to make the agentic workflow visible during a pitch without requiring cloud credentials or a live customer data connection.
 
-## Demo storyline
+## Product walkthrough
 
 1. Open **Overview** to see the live compliance twin, posture trend, priority queue and agent event stream.
 2. Click **Simulate violation** to inject a safe synthetic card-like value into the observability stream. The UI shows local detection, masking and a new critical finding.
